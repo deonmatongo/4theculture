@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(node -e \"console.log\\('next', require\\('next/package.json'\\).version\\)\")",
+      "Bash(npm run *)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"events: %{http_code}\\\\n\" localhost:3000/events)",
+      "Bash(curl -s -o /dev/null -w \"admin/login: %{http_code}\\\\n\" localhost:3000/admin/login)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"import instaloader; print\\('instaloader', instaloader.__version__\\)\")",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python -c \"import instaloader; print\\('instaloader', instaloader.__version__, 'ready'\\)\")",
+      "Bash(chmod +x download-instagram.sh)",
+      "Bash(timeout 90 .venv/bin/instaloader --dirname-pattern images --no-metadata-json --no-captions --count 3 4theculture_____)",
+      "Bash(.venv/bin/instaloader --dirname-pattern images --no-metadata-json --no-captions --count 3 4theculture_____)",
+      "Bash(curl -s -o /dev/null -w \"gallery: %{http_code}\\\\n\" localhost:3000/gallery)",
+      "Bash(curl -s localhost:3000/gallery)",
+      "Bash(.venv/bin/python -c \"import browser_cookie3; print\\('browser_cookie3 ready'\\)\")",
+      "Bash(.venv/bin/instaloader --load-cookies chrome --dirname-pattern public/images --no-metadata-json --no-captions --no-video-thumbnails --count 3 4theculture_____)",
+      "Bash(.venv/bin/gallery-dl --version)",
+      "Bash(.venv/bin/gallery-dl --cookies-from-browser chrome -D public/images --no-mtime https://www.instagram.com/4theculture_____/)",
+      "Bash(curl -s localhost:3000/api/events)",
+      "Bash(.venv/bin/python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(e['title'][:28].ljust\\(30\\), '->', e['coverImage']\\) for e in d['events']]\")",
+      "Bash(curl -s localhost:3000/events)",
+      "Bash(curl -s localhost:3000)",
+      "Bash(grep -o \"FOR THE.\\\\{0,180\\\\}\")",
+      "Bash(.venv/bin/python -)",
+      "Bash(cat)",
+      "Bash(.venv/bin/python /tmp/parse.py)",
+      "Bash(node scripts/generate-media-manifest.mjs)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}
