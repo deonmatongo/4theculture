@@ -4,6 +4,7 @@
   "private": true,
   "description": "4theculture — event-hosting collective platform: vibrant public site + secure admin dashboard.",
   "scripts": {
+    "predev": "node scripts/generate-media-manifest.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/generate-media-manifest.mjs",
     "build": "next build",
