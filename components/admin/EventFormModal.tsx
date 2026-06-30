@@ -200,7 +200,7 @@ export function EventFormModal({
                   <input
                     type="number"
                     className="input-field w-24"
-                    placeholder="$"
+                    placeholder="zł"
                     value={t.price}
                     onChange={(e) => updateTier(i, { price: e.target.value })}
                   />

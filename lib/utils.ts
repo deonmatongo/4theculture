@@ -6,9 +6,9 @@ export function cn(...parts: Array<string | false | null | undefined>): string {
 }
 
 export const currency = (n: number) =>
-  new Intl.NumberFormat("en-US", {
+  new Intl.NumberFormat("pl-PL", {
     style: "currency",
-    currency: "USD",
+    currency: "PLN",
     maximumFractionDigits: 0,
   }).format(n);
 

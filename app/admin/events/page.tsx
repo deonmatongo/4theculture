@@ -63,26 +63,30 @@ export default function AdminEventsPage() {
                 <div key={e.id}>
                   <button
                     onClick={() => setExpanded(isOpen ? null : e.id)}
-                    className="w-full grid md:grid-cols-[2fr_1.2fr_1fr_1fr_40px] gap-2 md:gap-4 px-5 py-4 text-left hover:bg-white/5 transition items-center"
+                    className="w-full flex items-center gap-3 px-4 py-4 text-left hover:bg-white/5 transition sm:px-5 md:grid md:grid-cols-[2fr_1.2fr_1fr_1fr_40px] md:gap-4 md:items-center"
                   >
-                    <div>
-                      <p className="font-semibold">{e.title}</p>
-                      <p className="text-xs text-white/40">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold truncate">{e.title}</p>
+                      <p className="text-xs text-white/40 truncate">
                         {e.category} · {e.venue}
                       </p>
+                      {/* Mobile-only meta (date + capacity) */}
+                      <p className="mt-1 text-xs text-white/50 tabular-nums md:hidden">
+                        {formatEventDate(e.date)} · {sold}/{cap} sold
+                      </p>
                     </div>
-                    <span className="text-sm text-white/60">
+                    <span className="hidden text-sm text-white/60 md:inline">
                       {formatEventDate(e.date)}
                     </span>
-                    <span className="text-sm text-white/60 tabular-nums">
+                    <span className="hidden text-sm text-white/60 tabular-nums md:inline">
                       {sold} / {cap}
                     </span>
-                    <span>
+                    <span className="shrink-0">
                       <StatusBadge status={e.status} />
                     </span>
                     <ChevronDown
                       className={cn(
-                        "h-5 w-5 text-white/40 transition justify-self-end",
+                        "h-5 w-5 shrink-0 text-white/40 transition md:justify-self-end",
                         isOpen && "rotate-180"
                       )}
                     />
@@ -111,7 +115,7 @@ export default function AdminEventsPage() {
                               </div>
 
                               <div className="flex items-center gap-2">
-                                <span className="text-white/40 text-sm">$</span>
+                                <span className="text-white/40 text-sm">zł</span>
                                 <input
                                   type="number"
                                   value={draft}

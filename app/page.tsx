@@ -127,11 +127,11 @@ export default function HomePage() {
 
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 pt-32 pb-14 sm:pt-40 sm:pb-20">
           {/* Kicker */}
-          <div className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
-            <span className="h-px w-10 bg-white/50" />
+          <div className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60 sm:text-xs sm:tracking-[0.3em]">
+            <span className="hidden h-px w-10 bg-white/50 sm:inline-block" />
             Poznań · Nightlife · Community
             {heroVideo && (
-              <span className="ml-1 inline-flex items-center gap-1.5 text-white/40">
+              <span className="inline-flex items-center gap-1.5 text-white/40">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white" />
                 Live footage
               </span>
@@ -161,8 +161,8 @@ export default function HomePage() {
           </div>
 
           {/* Next-event countdown strip */}
-          <div className="mt-12 inline-flex flex-col gap-5 rounded-2xl glass-strong p-5 sm:flex-row sm:items-center sm:p-6">
-            <div className="min-w-[200px]">
+          <div className="mt-10 flex w-full flex-col gap-5 rounded-2xl glass-strong p-4 sm:mt-12 sm:inline-flex sm:w-auto sm:flex-row sm:items-center sm:p-6">
+            <div className="sm:min-w-[200px]">
               <p className="text-[11px] uppercase tracking-widest text-white/40">
                 Next event
               </p>

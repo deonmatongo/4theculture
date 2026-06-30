@@ -53,16 +53,16 @@ export function Countdown({ target }: { target: string }) {
   }
 
   return (
-    <div className="flex gap-3 sm:gap-4">
+    <div className="flex w-full gap-2 sm:w-auto sm:gap-4">
       {blocks.map((b) => (
         <div
           key={b.label}
-          className="glass rounded-2xl px-3 py-3 sm:px-5 sm:py-4 text-center min-w-[68px] sm:min-w-[84px]"
+          className="glass flex-1 rounded-2xl px-2 py-3 text-center min-w-0 sm:min-w-[84px] sm:flex-none sm:px-5 sm:py-4"
         >
-          <div className="text-2xl sm:text-4xl font-bold tabular-nums text-gradient">
+          <div className="text-xl font-bold tabular-nums text-gradient sm:text-4xl">
             {b.value === undefined ? "––" : String(b.value).padStart(2, "0")}
           </div>
-          <div className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 mt-1">
+          <div className="mt-1 text-[10px] uppercase tracking-widest text-white/50 sm:text-xs">
             {b.label}
           </div>
         </div>

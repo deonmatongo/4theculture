@@ -41,7 +41,14 @@
       "Bash(git branch *)",
       "Bash(git count-objects *)",
       "Bash(vercel --prod --yes)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(curl -s -o /dev/null -w '%{redirect_url}\\\\n' https://4theculture-dfbv82v8u-deon-matongos-projects.vercel.app)",
+      "Bash(vercel project *)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('ssoProtection now:', JSON.stringify\\(j.ssoProtection\\)\\); if\\(j.error\\)console.log\\('ERROR:',j.error.message\\)}\\)\")",
+      "Bash(grep -rn '\">\\\\$\\\\|\"\\\\$\"\\\\|\\\\$</\\\\|text.*\\\\$' app components)",
+      "Bash(grep -vE \"\\\\\\\\\\\\$\\\\{|\\\\\\\\\\\\$\\\\\\(|node_modules\")",
+      "Bash(grep '\\\\$')",
+      "Bash(node -e \"console.log\\(new Intl.NumberFormat\\('pl-PL',{style:'currency',currency:'PLN',maximumFractionDigits:0}\\).format\\(480\\)\\)\")"
     ]
   }
 }
